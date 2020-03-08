@@ -1,0 +1,43 @@
+笔记：
+
+1. 记得html中的canvas要乘以10倍；
+2. 把逻辑放在Director类里面，把初始化的创建放在Main里面，而把所有的数据管理放在DataStore里面；
+3. 工厂模式；
+4. 学会使用单例，eg:
+    //全局只有一个，所以也要创建单例
+    static getInstance(){
+        if (!DataStore.instance){
+            DataStore.instance = new DataStore();
+        }
+        return DataStore.instance;
+    }
+    全局只用一次就要做成单例模式。
+
+5. 链式操作：put(key,value){
+                this.map.set(key,value);
+                return this;//在操作时候不必每次set，这样就能做到链式操作。
+            }
+
+6. ES6中的类实际上是作为function存在的；
+
+7. 在实例化类传参的时候可以直接对传入的值进行判断，
+如果传进来的值的类型是funtion类型就直接new一个value，以省去类的实例完整地作为实参
+放入函数括号中，这时只要将器类名写上去即可，如同函数那样；eg:
+   this.dataStore
+            .put('background', new Background());
+
+            要写成
+   this.dataStore
+            .put('background', Background);
+
+            需要在传入参数时进行判断，
+
+        if (typeof value === 'function'){
+            value === new value();
+        }
+
+
+8.
+
+
+
