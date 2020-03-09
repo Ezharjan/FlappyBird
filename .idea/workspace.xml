@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91810fb2-3117-4221-9855-0eb45b30d5d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audios/bgm.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Director.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Director.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/base/DataStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/base/DataStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/base/ResourceLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/base/ResourceLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/base/Resources.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/base/Resources.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/base/Sprite.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/base/Sprite.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/player/Birds.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player/Birds.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/player/Scores.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player/Scores.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/player/StartButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player/StartButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/runtime/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/runtime/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/runtime/DownPencil.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/runtime/DownPencil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/runtime/Land.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/runtime/Land.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/runtime/Pencil.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/runtime/Pencil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/runtime/UpPencil.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/runtime/UpPencil.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +54,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Adobe After Effects/WechatDevProjects" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\3rd-Grade\【Ready_to_hand_in\FlappyBird" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\3rd-Grade\【Ready_to_hand_in\FlappyBird\audios" />
       <recent name="D:\3rd-Grade\【Ready_to_hand_in\FlappyBird" />
     </key>
   </component>
@@ -68,6 +78,8 @@
       <updated>1583636308849</updated>
       <workItem from="1583636313528" duration="21899000" />
       <workItem from="1583714784397" duration="13249000" />
+      <workItem from="1583739107895" duration="6420000" />
+      <workItem from="1583748653546" duration="44000" />
     </task>
     <servers />
   </component>
@@ -79,17 +91,25 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="508" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1583656213985" />
+    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1583748694718">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1583748694718" />
     <state x="363" y="54" key="SettingsEditor" timestamp="1583718616732">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="363" y="54" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1583718616732" />
+    <state x="60" y="18" width="782" height="702" key="find.popup" timestamp="1583741056508">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="60" y="18" width="782" height="702" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1583741056508" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1583717760709">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1583717760709" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1583723778830">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1583743779910">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1583723778830" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1583743779910" />
   </component>
 </project>

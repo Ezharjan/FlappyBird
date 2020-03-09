@@ -3,8 +3,6 @@ import {Resources} from "./Resources.js";
 
 export class ResourceLoader {
 
-    map = null;//浏览器会报错——不兼容这样的声明
-
     constructor() {
         //将所有的资源塞入Map集合中
         this.map = new Map(Resources);
@@ -12,7 +10,7 @@ export class ResourceLoader {
         for (let [key, value] of this.map) {
             // console.log(key);
             // console.log(value);
-            const image = new Image();
+            const image = new wx.createImage();
             image.src = value;
             //获取路径下的图片实际数据并重新赋值给map
             this.map.set(key, image);
@@ -33,15 +31,6 @@ export class ResourceLoader {
                     callback(this.map);
                 }
             }
-
-            //以前的获取this的方式：
-            //直接获取到所有的values值
-            // let self = this;
-            // for (let value of this.map.values()) {
-            //     value.onload = function () {
-            //         self.
-            //     ...
-            //     }
         }
     }
 
@@ -49,5 +38,4 @@ export class ResourceLoader {
     static create() {
         return new ResourceLoader();
     }
-
 }

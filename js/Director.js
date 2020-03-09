@@ -5,7 +5,6 @@ import {DownPencil} from "./runtime/DownPencil.js";
 
 export class Director {
 
-    //单例——只允许又一个导演
     static getInstance() {
         if (!Director.instance) {
             Director.instance = new Director();
@@ -14,17 +13,14 @@ export class Director {
     }
 
     constructor() {
-        //即便多次调用getInstance也只会执行一次。
-        //这就是ES6实现单例模式。
-        console.log('构造器初始化');
 
         this.dataStore = DataStore.getInstance();
         this.moveSpeed = 2;
     }
 
     createPencil() {
-        const minTop = window.innerHeight / 8;
-        const maxTop = window.innerHeight / 2;
+        const minTop = DataStore.getInstance().canvas.height / 8;
+        const maxTop = DataStore.getInstance().canvas.height / 2;
         const top = minTop + Math.random() * (maxTop - minTop);
         this.dataStore.get('pencils').push(new UpPencil(top))
         this.dataStore.get('pencils').push(new DownPencil(top))
@@ -93,6 +89,12 @@ export class Director {
         //加分逻辑
         if (birds.birdsX[0] > pencils[0].x + pencils[0].width
             && score.isScorable) {
+            var params = {
+                success:function(){
+                    console.log('震动成功');
+                }
+            };
+            wx.vibrateShort(params);
             score.isScorable = false;
             score.scoreNumber++;
         }
@@ -117,7 +119,7 @@ export class Director {
                 this.dataStore.get('score').isScorable = true;
             }
             //创建铅笔
-            if (pencils[0].x <= (window.innerWidth - pencils[0].width) / 2
+            if (pencils[0].x <= (DataStore.getInstance().canvas.width - pencils[0].width) / 2
                 && pencils.length === 2) {
                 this.createPencil();
             }

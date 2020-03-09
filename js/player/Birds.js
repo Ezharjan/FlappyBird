@@ -1,4 +1,5 @@
 import {Sprite} from "../base/Sprite.js";
+import {DataStore} from "../base/DataStore.js";
 
 //循环渲染图片的中的三只小鸟
 export class Birds extends Sprite {
@@ -20,9 +21,9 @@ export class Birds extends Sprite {
         this.clippingHeight = [24, 24, 24];
 
         //小鸟的初始位置；私有的声明为const
-        const birdX = window.innerWidth / 4;
+        const birdX = DataStore.getInstance().canvas.width / 4;
         this.birdsX = [birdX, birdX, birdX];
-        const birdY = window.innerHeight / 2;
+        const birdY = DataStore.getInstance().canvas.height / 2;
         this.birdsY = [birdY, birdY, birdY];
 
         const birdWidth = 34;
@@ -38,21 +39,16 @@ export class Birds extends Sprite {
     }
 
     draw() {
-        //不能是小数！否则无法在数组中取出对应的index值。
-        //但是鉴于浏览器刷新速度大，因此必须要通过减小速度来改变小鸟
-        //在绘制过程中的闪烁问题！使用向下取整对index进行处理！
+
         const changeBirdSpeed = 0.2;
         this.count = this.count + changeBirdSpeed;
         if (this.index >= 2) {
             this.count = 0
         }
 
-        //直接取，因为速度是小数所以就无法顺序读取
-        // this.index = this.count;
         //使用向下取整的方式，减缓素的并取出对应小鸟
         this.index = Math.floor(this.count);//减速器的作用
 
-        //添加小鸟的重力——不能直接使用物理学上的重力！！
         const g = 0.98 / 2.4;//伪重力
 
         //为了营造飞的真实感，在掉落时需要向上偏移一点

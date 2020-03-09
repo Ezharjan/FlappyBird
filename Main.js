@@ -12,7 +12,7 @@ export class Main {
     constructor() {
         console.log("Running...");
         // new ResourceLoader();
-        this.canvas = document.getElementById('game_canvas');
+        this.canvas = wx.createCanvas();
         this.ctx = this.canvas.getContext('2d');
 
         //初始化DataStore
@@ -25,43 +25,29 @@ export class Main {
         //当所有的资源已经加载完成了才去回调onResourceFirstLoaded函数！！！
         loader.onLoaded(map => this.onResourceFirstLoaded(map));
 
-        //多次调用单例但是只会调用一次
-        // Director.getInstance();
-        // Director.getInstance();
-        // Director.getInstance();
 
-        /*
-        //drawImage剪裁图片
-        let image = new Image();
-        image.src = '../res/background.png';
-
-        //只有加载完图片才能进行渲染！！！
-        image.onload = () => {//使用箭头函数获取外部的this
-            this.ctx.drawImage(
-                image,//剪裁对象
-                0,  //剪裁的X轴起始位置
-                0,  //剪裁的Y轴起始位置
-                image.width,
-                image.height,
-                0,  //canvas在X轴上的0位置
-                0,   //canvas在Y轴上的0位置
-                image.width,
-                image.height,
-            );
-        }
-
-*/
     }
+
+    //创建背景音乐
+    createBackgroundMusic() {
+        var bgm = wx.createInnerAudioContext();
+        bgm.autoplay = true;
+        bgm.loop = true;
+        bgm.src = 'audios/bgm.mp3';
+    }
+
 
     //资源只需要加载一次，重新开始游戏的时候只用重置逻辑即可
     onResourceFirstLoaded(map) {
 
         //将长期保存而不必销毁的元素放在类的变量中（而需要销毁的则放在类的map中）；
+        this.dataStore.canvas = this.canvas;
         this.dataStore.ctx = this.ctx;
         this.dataStore.res = map;
 
+        this.createBackgroundMusic();
+
         this.init();
-        // console.log(map);
     }
 
     init() {
@@ -86,11 +72,8 @@ export class Main {
     }
 
     registerEvent() {
-        this.canvas.addEventListener('touchstart', e => {
-            e.preventDefault();//关闭默认的事件冒泡
-            console.log(this);//使用箭头函数让this指向了部的Main
-            console.log("触摸了");
-            //只有使用了箭头函数，director才能够直接被调过来
+
+        wx.onTouchStart(() => {
             if (this.director.isGameOver) {
                 console.log("游戏开始！");
                 this.init();

@@ -7,9 +7,3 @@ export const Resources = [
     ['startButton', 'res/start_button.png'],
     ['beginButton', 'res/begin.png']
 ];
-
-
-// export class Resources{
-//
-// }
-//也能直接将要export写在最底下，使用 export {className} 的方式

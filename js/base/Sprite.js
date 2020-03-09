@@ -2,7 +2,7 @@
 import {DataStore} from "./DataStore.js";
 
 export class Sprite {
-    //如果函数在传参的时候忘了赋值就会默认使用等号左边的值
+    
     constructor(img = null,
                 srcX = 0,
                 srcY = 0,
@@ -10,8 +10,6 @@ export class Sprite {
                 srcH = 0,
                 x = 0, y = 0,
                 width = 0, height = 0) {
-        // this.dataStore = DataStore.getInstance();
-        // this.ctx = this.dataStore.ctx;
         this.dataStore = DataStore.getInstance();
         this.ctx = this.dataStore.ctx;
         this.img = img;
