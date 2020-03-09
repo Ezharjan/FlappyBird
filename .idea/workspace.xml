@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91810fb2-3117-4221-9855-0eb45b30d5d9" name="Default Changelist" comment="" />
+    <list default="true" id="91810fb2-3117-4221-9855-0eb45b30d5d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Director.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Director.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/player/Birds.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player/Birds.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/player/Scores.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player/Scores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/player/StartButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player/StartButton.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +24,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -22,6 +34,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1YpOwWlYE1lQsTdeKlqxFNURsyr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -30,15 +43,16 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\3rd-Grade\【Ready_to_hand_in\FlappyBird" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\3rd-Grade\【Ready_to_hand_in\FlappyBird" />
     </key>
   </component>
@@ -53,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583636308849</updated>
       <workItem from="1583636313528" duration="21899000" />
+      <workItem from="1583714784397" duration="13249000" />
     </task>
     <servers />
   </component>
@@ -64,17 +79,17 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="508" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1583656213985" />
-    <state x="270" y="60" key="SettingsEditor" timestamp="1583677189959">
+    <state x="363" y="54" key="SettingsEditor" timestamp="1583718616732">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="270" y="60" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1583677189959" />
-    <state x="425" y="189" key="run.anything.popup" timestamp="1583655943281">
+    <state x="363" y="54" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1583718616732" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1583717760709">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1583655943281" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1583681803246">
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1583717760709" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1583723778830">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1583681803246" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1583723778830" />
   </component>
 </project>

@@ -4,6 +4,9 @@ import {Director} from "./js/Director.js";
 import {Background} from "./js/runtime/Background.js";
 import {DataStore} from "./js/base/DataStore.js";
 import {Land} from "./js/runtime/Land.js";
+import {Birds} from "./js/player/Birds.js";
+import {StartButton} from "./js/player/StartButton.js";
+import {Scores} from "./js/player/Scores.js";
 
 export class Main {
     constructor() {
@@ -62,13 +65,38 @@ export class Main {
     }
 
     init() {
+
+        //首先，重置游戏状态为尚未结束
+        this.director.isGameOver = false;
+
         this.dataStore
             .put('pencils', [])
             .put('background', Background)
             .put('land', Land)
+            .put('birds', Birds)
+            .put('startButton', StartButton)
+            .put('score', Scores)
         ;//可以进行链式操作，一层一层往下put。
+
+        this.registerEvent();
+
         //要在游戏运行之前就创建好铅笔！！！
         this.director.createPencil();
         this.director.run();
+    }
+
+    registerEvent() {
+        this.canvas.addEventListener('touchstart', e => {
+            e.preventDefault();//关闭默认的事件冒泡
+            console.log(this);//使用箭头函数让this指向了部的Main
+            console.log("触摸了");
+            //只有使用了箭头函数，director才能够直接被调过来
+            if (this.director.isGameOver) {
+                console.log("游戏开始！");
+                this.init();
+            } else {
+                this.director.birdsEvent();//绑定点击事件，导演控制
+            }
+        })
     }
 }
