@@ -1,4 +1,6 @@
 # FlappyBird
 Classical game developed using HTML, CSS, and JavaScript by Alexander Ezharjan in Wechat mini game versioin.
 
-内含本人所写的PC版本和微信上可以运行的微信小游戏版本的压缩包源码文件，也有相应的笔记。仓库中的现有源码本身则是基于PC开发。
+The content of this repositry includes my learning notes along with the source code of both PC version and Wechat MiniGame version presented in '.zip' file while repositry itself remains on PC version of the classical game Flappy Bird. 
+                                                                                  
+                                                                                  by  Alexander Ezharjan.
